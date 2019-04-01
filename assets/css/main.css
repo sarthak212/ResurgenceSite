@@ -36,6 +36,27 @@
 		quotes: none;
 	}
 
+	.social {
+		position: absolute;
+		top: 60vh;
+		left: 190%;
+		display: flex;
+	}
+
+	.register {
+		position: absolute;
+		top: 60vh;
+		font-size: 20px;
+		padding: 5px;
+		padding-left: 10px;
+		left: -450px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+	.padding {
+		padding: 10px;
+	}
+
 	blockquote:before, blockquote:after, q:before, q:after {
 		content: '';
 		content: none;
@@ -2419,10 +2440,12 @@
 			display: block;
 			margin: 0 0 2em 0;
 			width: 100%;
+			height: 100%;
 		}
 
 			.image.fit img {
 				width: 100%;
+				height: 100%;
 			}
 
 		.image.main {
@@ -3763,7 +3786,6 @@
 			#banner p {
 				font-size: 1em;
 			}
-
 		}
 
 		body.is-loading #banner .inner {
