@@ -17,6 +17,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
+		outline:0;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -2529,7 +2530,14 @@
 				ul.icons li .icon:before {
 					font-size: 2em;
 				}
-
+		.icon2,.icon2>li{
+			list-style-type: none;
+			display: inline;
+			margin-left: 20px;
+		}
+		.icon2>li{
+			font-size: 1.5rem;
+		}
 		ul.actions {
 			cursor: default;
 			list-style: none;
