@@ -2445,6 +2445,15 @@
 
 			.image.fit img {
 				width: 100%;
+				height: 80%;
+			}
+			.image.fit.gallery img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.image.fit.image img {
+				width: 100%;
 				height: 100%;
 			}
 
@@ -3847,4 +3856,18 @@
 				padding: 3em 0 1em 0;
 			}
 
+		}
+
+		.abc {
+			color: #c0c5c9;
+			padding: 1em;
+			font-size: 1.2em;
+			font-weight: 300;
+			margin: 0;
+			text-align: center;
+		}
+
+		.cd {
+			height: 80%;
+			transform: scale(0);
 		}
