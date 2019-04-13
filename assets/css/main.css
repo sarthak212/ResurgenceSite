@@ -36,27 +36,32 @@
 		quotes: none;
 	}
 
-	.social {
-		position: absolute;
-		top: 60vh;
-		left: 190%;
-		display: flex;
-	}
-
 	.register {
 		position: absolute;
-		top: 60vh;
+		text-align: center;
+		top: 75%;
+		left: 3%;
 		font-size: 20px;
-		padding: 5px;
-		padding-left: 10px;
-		left: -450px;
+		padding: 8px 15px;
 		border: 1px solid #ccc;
-		border-radius: 5px;
-	}
-	.padding {
-		padding: 10px;
+		border-radius: 5%;
 	}
 
+	@media screen and (max-width: 736px){
+        .register {
+			top: 100%;
+			font-size: 15px;
+			padding: 5px 10px;
+		}
+	}
+
+	@media screen and (max-width: 480px){
+		.register {
+			top: 100%;
+			font-size: 10px;
+			padding: 2px 8px;
+		}
+	}
 	blockquote:before, blockquote:after, q:before, q:after {
 		content: '';
 		content: none;
@@ -2442,10 +2447,14 @@
 			width: 100%;
 			height: 100%;
 		}
+		.image.fit.team {
+			height: 75%;
+		}
 
 			.image.fit img {
 				width: 100%;
-				height: 80%;
+				height: 100%;
+				object-fit: cover;
 			}
 			.image.fit.gallery img {
 				width: 100%;
@@ -2539,6 +2548,43 @@
 				ul.icons li .icon:before {
 					font-size: 2em;
 				}
+
+
+
+		ul.social {
+			 cursor: default;
+			 position: absolute;
+			 list-style: none;
+			 top: 76%;
+			 right: 5%;
+		}
+
+			ul.social li{
+				display: inline-block;
+			}
+
+			ul.social li .icon:before {
+				font-size:  2em;
+			}
+			
+			@media screen and (max-width: 736px){
+				ul.social {
+					top: 100%;
+				}
+				ul.social li .icon:before {
+					font-size: 1.5em;
+				}
+			}
+
+			@media screen and (max-width: 480px){
+
+				ul.social {
+					top: 100%;
+				}
+				ul.social li .icon:before {
+					font-size: 1em;
+				}
+			}
 		.icon2,.icon2>li{
 			list-style-type: none;
 			display: inline;
@@ -3658,11 +3704,9 @@
 			}
 
 		}
-
-/* Banner */
-
-	#banner {
-		display: -ms-flexbox;
+		 
+		#banner {
+			display: -ms-flexbox;
 		-ms-flex-pack: center;
 		-ms-flex-align: center;
 		padding: 8em 0 6em 0;
@@ -3678,17 +3722,66 @@
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-image: url("../../images/banner.jpg");
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
 		border-top: 0;
 		min-height: 100vh;
 		height: 100vh !important;
 		position: relative;
 		text-align: center;
-		overflow: hidden;
-	}
+        overflow: hidden;
+		}
+		.slideshow-container {
+			max-width: 100%;
+			position: relative;
+			margin: auto;
+			z-index: 1;
+		  }
+		  .mySlides {
+			display: none;
+		  }
+		  .mySlides img{
+            opacity: .6;
+		  }
+		  .dot {
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			background-color: #bbb;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.6s ease;
+		  }
+		  #dotdiv {
+			  position: absolute;
+			  top: 78%;
+			  left: 48%;
+		  }
+		  .active1{
+			background-color: #717171;
+		  }
+		  
+		  .fade {
+			-webkit-animation-name: fade;
+			-webkit-animation-duration: 1.5s;
+			animation-name: fade;
+			animation-duration: 1.5s;
+		  }
+		  
+		  @-webkit-keyframes fade {
+			from {opacity: .4}
+			to {opacity: 1}
+		  }
+		  
+		  @keyframes fade {
+			from {opacity: .4}
+			to {opacity: 1}
+		  }
+
+		  @media screen and (max-width: 480px){
+			  .dot {
+				  height: 10px;
+				  width: 10px;
+			  }
+		  }
 
 		#banner .inner {
 			-moz-transform: scale(1.0);
@@ -3704,64 +3797,25 @@
 			z-index: 2;
 		}
 
-		#banner h1 {
-			font-size: 4em;
-			margin-bottom: .25em;
-		}
-
-		#banner p {
-			color: rgba(255, 255, 255, 0.65);
-			font-size: 1.5em;
-		}
-
-		#banner video {
-			-moz-transform: translateX(50%) translateY(50%);
-			-webkit-transform: translateX(50%) translateY(50%);
-			-ms-transform: translateX(50%) translateY(50%);
-			transform: translateX(50%) translateY(50%);
+		#titleresurgence {
+			font-size: 4rem;
+			font-weight: 600;
 			position: absolute;
-			bottom: 50%;
-			right: 50%;
-			width: auto;
-			height: auto;
-			min-width: 100%;
-			min-height: 100%;
-			overflow: hidden;
+			top: 33%;
+			left: 36%;
 		}
-
-		#banner:before {
-			-moz-transition: opacity 3s ease;
-			-webkit-transition: opacity 3s ease;
-			-ms-transition: opacity 3s ease;
-			transition: opacity 3s ease;
-			-moz-transition-delay: 1.25s;
-			-webkit-transition-delay: 1.25s;
-			-ms-transition-delay: 1.25s;
-			transition-delay: 1.25s;
-			content: '';
-			display: block;
-			background-color: #041625;
-			height: 100%;
-			left: 0;
-			opacity: 0.45;
+		#titleyear {
+			font-size: 4rem;
 			position: absolute;
-			top: 0;
-			width: 100%;
-			z-index: 1;
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			#banner video {
-				display: none;
-			}
-
+			top: 40%;
+			left: 45%;
 		}
 
 		@media screen and (max-width: 736px) {
 
 			#banner {
 				min-height: 0;
+				width: 100%;
 				height: auto !important;
 				padding: 4em 2em;
 			}
@@ -3772,12 +3826,6 @@
 
 				#banner h1 {
 					font-size: 1.75em;
-					margin-bottom: 0.5em;
-					padding-bottom: 0;
-				}
-
-				#banner p {
-					font-size: 1.25em;
 				}
 
 				#banner br {
@@ -3787,6 +3835,17 @@
 				#banner .button {
 					width: 100%;
 				}
+				#dotdiv {
+					top: 100%;
+					left: 40%;
+				}
+				#titleresurgence {
+					font-size: 2rem;
+				}
+				#titleyear {
+					font-size: 2rem;
+				}
+
 
 		}
 
@@ -3794,6 +3853,20 @@
 
 			#banner p {
 				font-size: 1em;
+			}
+			#dotdiv {
+				top: 100%;
+				left: 40%;
+			}
+			#titleresurgence {
+				font-size: 1.5rem;
+				top: 25%;
+				left: 25%;
+			}
+			#titleyear {
+				font-size: 1.5rem;
+				top: 35%;
+				left: 40%;
 			}
 		}
 
@@ -3871,3 +3944,56 @@
 			height: 80%;
 			transform: scale(0);
 		}
+		#housebar {
+			list-style: none;
+			position: absolute;
+			height: 10%;
+			width: 100%;
+			top: 10%;
+		}
+
+		#housebar li{
+			display: inline-block;
+			font-size: 1.5rem;
+			font-weight: 600;
+			margin-left: 11%;
+		}
+
+		#tablehouse {
+			position: absolute;
+			width: 100%;
+			top: 20%;
+			height: auto;
+		}
+		.firsttable {
+			font-weight: bold;
+			width: 14%;
+		}
+		@media screen and (max-width: 736px){
+				#housebar {
+					height: 20%;
+				}
+				#housebar li {
+					font-size: 1rem;
+				}
+				#tablehouse table tr{
+					font-size: 1rem;
+				}
+		}
+
+		@media screen and (max-width: 480px){
+			#housebar {
+				height: 20%;
+			}
+			#housebar li {
+				font-size: .6rem;
+				margin-left: 3%;
+			}
+			#housebar li:first-child{
+				margin-left: 20%;
+			}
+	       #tablehouse table tr{
+			   font-size: .6rem;
+		   }
+		}
+	
